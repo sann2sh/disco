@@ -115,11 +115,6 @@ systemctl --user enable disco.service
 systemctl --user restart disco.service
 info "Service enabled and started"
 
-# ── Linger ────────────────────────────────────────────────────────────────────
-loginctl enable-linger "$USER" 2>/dev/null \
-    && info "Linger enabled – starts at boot even without login" \
-    || warn "Could not enable linger – service starts on login only"
-
 # ── Done ──────────────────────────────────────────────────────────────────────
 echo ""
 echo -e "${BOLD}${GREEN}✓ disco is installed and running!${NC}"

@@ -2,8 +2,8 @@
 Description=disco – audio-reactive ASUS TUF keyboard backlight
 Documentation=https://github.com/sann2sh/disco
 # Wait for the audio session (PipeWire / PulseAudio) to be ready.
+PartOf=graphical-session.target
 After=graphical-session.target pipewire.service pulseaudio.service
-Wants=graphical-session.target
 
 [Service]
 Type=simple
@@ -23,4 +23,4 @@ StandardError=journal
 Nice=10
 
 [Install]
-WantedBy=default.target
+WantedBy=graphical-session.target

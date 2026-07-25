@@ -14,6 +14,10 @@ systemctl --user stop    disco.service 2>/dev/null && info "Service stopped"   |
 systemctl --user disable disco.service 2>/dev/null && info "Service disabled"  || true
 systemctl --user daemon-reload
 
+loginctl disable-linger "$USER" 2>/dev/null || true
+info "Linger disabled"
+
+
 rm -f  "$HOME/.config/systemd/user/disco.service" && info "Service file removed"
 rm -rf "$HOME/.local/lib/disco"                   && info "Library removed"
 rm -f  "$HOME/.local/bin/disco"                   && info "Launcher removed"
