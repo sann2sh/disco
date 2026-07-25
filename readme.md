@@ -1,6 +1,6 @@
 # disco 🎵
 
-**Audio-reactive keyboard backlight for ASUS TUF laptops on Linux.**
+**Audio-reactive keyboard backlight for ASUS laptops on Linux.**
 
 disco listens to whatever is playing through your speakers — music, videos, games — and makes your keyboard backlight react to it in real time.
 
@@ -8,7 +8,7 @@ disco listens to whatever is playing through your speakers — music, videos, ga
 - **Loudness mode** — brightness follows the audio level continuously
 - Smooth, low CPU usage, auto-starts at boot
 
-> Tested on ASUS TUF F15 with Ubuntu Linux + PipeWire. Should work on any ASUS laptop with the `asus-nb-wmi` driver.
+> Tested on ASUS TUF F15 with Ubuntu Linux + PipeWire. Should work on any modern ASUS laptop (TUF, ROG, Zenbook) that uses the `asus-nb-wmi` kernel driver (specifically requiring the `/sys/class/leds/asus::kbd_backlight` sysfs path).
 
 ---
 
