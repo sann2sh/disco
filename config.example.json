@@ -1,0 +1,26 @@
+{
+  "_comment": "disco – audio-reactive ASUS TUF F15 keyboard backlight config",
+  "_comment2": "All fields are optional; omit any to use the built-in default.",
+
+  "audio_source": null,
+
+  "chunk_size": 512,
+  "update_rate_hz": 45.0,
+
+  "ema_alpha": 0.15,
+  "hysteresis": 0.04,
+
+  "peak_decay_seconds": 8.0,
+  "rms_floor": 0.0001,
+
+  "brightness_floor": 0,
+  "brightness_ceiling": 3,
+  "sensitivity": 1.0,
+
+  "beat_mode": false,
+  "beat_threshold": 1.6,
+  "beat_flash_level": 3,
+  "beat_decay": 0.12,
+
+  "verbosity": 1
+}
