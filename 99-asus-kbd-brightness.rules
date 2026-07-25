@@ -1,0 +1,15 @@
+# /etc/udev/rules.d/99-asus-kbd-brightness.rules
+#
+# Allow any user to write the ASUS keyboard brightness AND RGB color
+# without sudo.
+#
+# Install (or reinstall after updating):
+#   sudo cp 99-asus-kbd-brightness.rules /etc/udev/rules.d/
+#   sudo udevadm control --reload-rules
+#   sudo udevadm trigger
+#
+# After this, you can run disco.py without sudo:
+#   python disco.py --beat
+#
+SUBSYSTEM=="leds", KERNEL=="asus::kbd_backlight", \
+    RUN+="/bin/chmod a+w /sys/class/leds/asus::kbd_backlight/brightness /sys/class/leds/asus::kbd_backlight/kbd_rgb_mode /sys/class/leds/asus::kbd_backlight/kbd_rgb_state"
