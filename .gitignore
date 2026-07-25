@@ -1,0 +1,18 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Build / packaging (not needed for curl install)
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# Personal config (if user creates one)
+config.json
+
+# IDE
+.vscode/
+.idea/
